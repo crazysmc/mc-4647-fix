@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "MC-4647 Fix",
+  "description": "A fix for bug MC-4647 and MC-10480",
+  "authors": [ "crazysmc" ],
+  "contact": {
+    "homepage": "https://github.com/crazysmc/${mod_id}",
+    "sources": "https://github.com/crazysmc/${mod_id}",
+    "issues": "https://github.com/crazysmc/${mod_id}/issues"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "mixins": [ "mod.mixins.json" ],
+  "depends": {
+    "minecraft": "=1.16.1",
+    "fabricloader": "*"
+  }
+}

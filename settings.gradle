@@ -1,0 +1,19 @@
+pluginManagement {
+  repositories {
+    maven {
+      name = 'Fabric'
+      url = 'https://maven.fabricmc.net/'
+    }
+    gradlePluginPortal()
+  }
+}
+
+dependencyResolutionManagement {
+  versionCatalogs {
+    libs {
+      version 'loom', '1.6-SNAPSHOT'
+      library 'loader', 'net.fabricmc', 'fabric-loader' version '0.15.10'
+      library 'minecraft', 'com.mojang', 'minecraft' version '1.16.1'
+    }
+  }
+}

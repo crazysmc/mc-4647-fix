@@ -1,0 +1,27 @@
+plugins {
+  id 'fabric-loom' version libs.versions.loom
+}
+
+version = "$mod_version+1.16.1"
+group = maven_group
+base.archivesName = mod_id
+
+dependencies {
+  minecraft libs.minecraft
+  mappings loom.officialMojangMappings()
+  modImplementation libs.loader
+}
+
+java {
+  toolchain.languageVersion = JavaLanguageVersion.of 8
+  withSourcesJar()
+}
+
+processResources {
+  inputs.property 'properties', project.properties.toString()
+  filesMatching 'fabric.mod.json', { expand project.properties }
+}
+
+tasks.withType Jar configureEach {
+  from rootProject.file('LICENSE')
+}
